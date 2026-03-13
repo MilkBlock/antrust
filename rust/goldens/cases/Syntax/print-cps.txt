@@ -1,0 +1,89 @@
+let _ =
+  ();;
+let _ =
+  4611686018427387903;;
+let _ =
+  true;;
+let _ =
+  false;;
+let _ =
+  let _'cont1 = fun _'a0 -> _'a0 in
+  print_endline "hello, world" _'cont1;;
+let _ =
+  let x = 10 in x;;
+type bin = | Zero | One;;
+type nat = | S of nat | Z;;
+type 'a list = | Nil | Cons of 'a * 'a list;;
+type ('a,'b) pair = | P of 'a * 'b;;
+type test = | CA of int list | CB of (int,unit) pair;;
+type 'a option = | None | Some of 'a;;
+type a = | KA of a
+and b = | KB of b;;
+type wrap_int = | A of int;;
+let _ =
+  let _'cont5 = fun _'a4 -> _'a4 in
+  (fun _'a2 _'k3 -> (_'k3 (A _'a2))) 10 _'cont5;;
+let _ =
+  (1 + ((2 * 3) / 4)) + ((5 + 6) * 7);;
+let _ =
+  (1, 2, 3);;
+let _ =
+  (4, 5, 6);;
+let _ =
+  [1; 2; 3];;
+let f =
+  fun x _'k6 -> (_'k6 (fun y _'k7 -> (_'k7 (x + y))));;
+let _ =
+  let x = 1 + 2 in let y = 2 + 4 in x + y;;
+let ignore =
+  fun x _'k8 -> (_'k8 ());;
+let _ =
+  let _'cont10 =
+    fun _'a9 ->
+      _'a9;
+      let _'cont12 = fun _'a11 -> _'a11; 30 in
+      global:ignore 20 _'cont12
+  in
+  global:ignore 10 _'cont10;;
+let rec f =
+  fun x _'k13 -> (global:f x _'k13);;
+let rec even =
+  fun x y _'k14 ->
+    match x with
+    | S (x) -> (global:odd x y _'k14)
+    | Z -> (_'k14 true) and odd =
+  fun x y _'k15 ->
+    match x with
+    | S (x) -> (global:even x y _'k15)
+    | Z -> (_'k15 false);;
+let x =
+  10;;
+let y =
+  let _'cont19 = fun _'a18 -> _'a18 in
+  (fun _'a16 _'k17 -> (_'k17 (Some _'a16))) 10 _'cont19;;
+let z =
+  (1, 2);;
+let w =
+  true;;
+let m =
+  ();;
+let _ =
+  match global:x with | 1 -> 2 | 2 -> 4 | 3 -> 8 | _ -> 16;;
+let _ =
+  match global:y with | Some (x) -> x | Some (_) -> 1 | None -> 0;;
+let _ =
+  match global:z with | 1, 2 -> 1 | 2, _ -> 2;;
+let _ =
+  match global:w with | true -> false | false -> true;;
+let _ =
+  match global:m with | () -> () | n -> n;;
+let _ =
+  let _'cont22 = fun _'a21 -> _'a21 in
+  (fun _'k20 ->
+     if true
+     then
+       (_'k20 (1 + 2))
+     else
+       if false then (_'k20 (3 + 4)) else (_'k20 (5 + 6))) _'cont22;;
+let _ =
+  ();;

@@ -1,0 +1,2 @@
+Usage: ant [--help] [OPTION]… INPUT OUTPUT
+ant: unknown option '--unknown-flag'

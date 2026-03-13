@@ -1,0 +1,9 @@
+let g =
+  fun x _'k0 -> (_'k0 ());;
+let f =
+  fun u _'k1 ->
+    let x = 1 in
+    let x = 2 in
+    let _'cont3 = fun _'a2 -> _'a2; (); _'k1 x in global:g 0 _'cont3;;
+let _ =
+  let _'cont5 = fun _'a4 -> _'a4 in global:f () _'cont5;;

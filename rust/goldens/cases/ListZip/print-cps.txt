@@ -1,0 +1,15 @@
+type int_list = | Nil | Cons of int * int_list;;
+let rec zip_add =
+  fun xs ys _'k0 ->
+    match xs with
+    | Nil -> (_'k0 Nil)
+    | Cons (xh, xt) ->
+      match ys with
+      | Nil -> (_'k0 Nil)
+      | Cons (yh, yt) ->
+        let _'cont6 =
+          fun _'a5 ->
+            ((fun _'a1 _'k3 ->
+                (_'k3 (fun _'a2 _'k4 -> (_'k4 (Cons (_'a1, _'a2)))))) (xh + yh) _'a5 _'k0)
+        in
+        global:zip_add xt yt _'cont6;;

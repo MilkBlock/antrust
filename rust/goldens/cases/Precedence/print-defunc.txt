@@ -1,0 +1,21 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with | `C_'lam1, x -> () | `C_'lam0, x -> x
+  in
+  _'defunc_apply;;
+let f =
+  `C_'lam0;;
+let g =
+  `C_'lam1;;
+let x =
+  0;;
+let _ =
+  _'defunc_apply global:f (if true then 1 else 2);;
+let _ =
+  _'defunc_apply global:f (let x = 1 in x);;
+let _ =
+  _'defunc_apply global:f (match global:x with | 0 -> 1 | _ -> 2);;
+let _ =
+  _'defunc_apply global:f (_'defunc_apply global:g 1;
+                           _'defunc_apply global:g 2);;

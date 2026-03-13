@@ -1,0 +1,7 @@
+let g = fun x -> ();;
+
+let f = fun u ->
+  let x = 1 in
+  ((let x = 2 in (g 0; ())) ; x);;
+
+let _ = f ();;

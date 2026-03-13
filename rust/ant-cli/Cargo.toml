@@ -1,0 +1,28 @@
+[package]
+name = "ant-cli"
+version = "0.1.0"
+edition = { workspace = true }
+license = { workspace = true }
+
+[dependencies]
+clap = { workspace = true }
+
+[dependencies.ant-frontend]
+path = "../ant-frontend"
+
+[dependencies.ant-typing]
+path = "../ant-typing"
+
+[dependencies.ant-transform]
+path = "../ant-transform"
+
+[dependencies.ant-runtime]
+path = "../ant-runtime"
+
+[dependencies.ant-backend]
+path = "../ant-backend"
+
+[dev-dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tempfile = { workspace = true }

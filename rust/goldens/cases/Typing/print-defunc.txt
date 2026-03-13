@@ -1,0 +1,51 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam14, x -> (x + 1)
+      | `C_'lam12, x -> x
+      | `C_'lam13, x -> x
+      | `C_'lam10, x -> (_'defunc_apply x `C_'lam11)
+      | `C_'lam11, y -> y
+      | `C_'lam8, x -> let y = `C_'lam9 in _'defunc_apply `C_'lam9 x
+      | `C_'lam9, z -> z
+      | `C_'lam6, x -> let y = `C_'lam7 in `C_'lam7
+      | `C_'lam7, z -> z
+      | `C_'lam5, z -> z
+      | `C_'lam4, x -> x
+      | `C_'lam2, x -> (`C_'lam3 x)
+      | (`C_'lam3 (x)), y -> (_'defunc_apply x y)
+      | `C_'lam1, x -> x
+      | `C_'lam0, x -> x
+  in
+  _'defunc_apply;;
+let _ =
+  `C_'lam0;;
+let id =
+  `C_'lam1;;
+let _ =
+  `C_'lam2;;
+let _ =
+  let x = `C_'lam4 in `C_'lam4;;
+let _ =
+  let x = global:id in x;;
+let _ =
+  let y = `C_'lam5 in `C_'lam5;;
+let _ =
+  `C_'lam6;;
+let _ =
+  `C_'lam8;;
+let _ =
+  `C_'lam10;;
+let _ =
+  (`C_'lam12, `C_'lam13);;
+let _ =
+  `C_'lam14;;
+let _ =
+  1 + 1;;
+let _ =
+  (1, 1);;
+type 'a list = | Nil | Cons of 'a * 'a list;;
+type ('a,'b) pair = | P of 'a * 'b;;
+type enum1 = | A of int list | B of (int,unit) pair;;
+type enum2 = | C of int list;;

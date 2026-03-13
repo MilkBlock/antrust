@@ -1,0 +1,16 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam0, xs ->
+        match xs with
+        | Nil -> 0
+        | Cons (xh, xt) ->
+          match xh with
+          | 0 -> (1 + (_'defunc_apply global:count_zero xt))
+          | _ -> (_'defunc_apply global:count_zero xt)
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec count_zero = `C_'lam0 in ();;

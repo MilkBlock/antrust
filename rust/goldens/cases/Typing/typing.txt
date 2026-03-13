@@ -1,0 +1,49 @@
+(* ('a) -> 'a *)
+let _ =
+  fun x -> x;;
+(* id ('a) -> 'a *)
+let id =
+  fun x -> x;;
+(* _ (('b) -> 'c) -> ('b) -> 'c *)
+let _ =
+  fun x -> (fun y -> (x y));;
+(* _ ('c) -> 'c *)
+let _ =
+  let x = fun x -> x in x;;
+(* _ ('c) -> 'c *)
+let _ =
+  let x = global:id in x;;
+(* _ ('c) -> 'c *)
+let _ =
+  let y = fun z -> z in y;;
+(* _ ('a) -> ('d) -> 'd *)
+let _ =
+  fun x -> let y = fun z -> z in y;;
+(* _ ('d) -> 'd *)
+let _ =
+  fun x -> let y = fun z -> z in y x;;
+(* _ ((('b) -> 'b) -> 'c) -> 'c *)
+let _ =
+  fun x -> (x (fun y -> y));;
+(* _ (('a) -> 'a, ('b) -> 'b) *)
+let _ =
+  ((fun x -> x), (fun x -> x));;
+(* _ (int) -> int *)
+let _ =
+  fun x -> (x + 1);;
+(* _ int *)
+let _ =
+  1 + 1;;
+(* _ (int, int) *)
+let _ =
+  (1, 1);;
+(* Nil: list 'a *)
+(* Cons: ('b, list 'b) -> list 'b *)
+type 'a list = | Nil | Cons of 'a * 'a list;;
+(* P: ('a, 'b) -> pair 'a 'b *)
+type ('a,'b) pair = | P of 'a * 'b;;
+(* A: (list int) -> enum1 *)
+(* B: (pair int unit) -> enum1 *)
+type enum1 = | A of int list | B of (int,unit) pair;;
+(* C: (list int) -> enum2 *)
+type enum2 = | C of int list;;

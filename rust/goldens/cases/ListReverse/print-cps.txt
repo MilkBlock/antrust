@@ -1,0 +1,28 @@
+type int_list = | Nil | Cons of int * int_list;;
+let rec rev_aux =
+  fun xs acc _'k0 ->
+    match xs with
+    | Nil -> (_'k0 acc)
+    | Cons (xh, xt) ->
+      let _'cont6 = fun _'a5 -> (global:rev_aux xt _'a5 _'k0) in
+      (fun _'a1 _'k3 ->
+         (_'k3 (fun _'a2 _'k4 -> (_'k4 (Cons (_'a1, _'a2)))))) xh acc _'cont6;;
+let rev =
+  fun xs _'k7 -> (global:rev_aux xs Nil _'k7);;
+let _ =
+  let _'cont21 =
+    fun _'a20 ->
+      let _'cont23 =
+        fun _'a22 ->
+          let _'cont25 =
+            fun _'a24 ->
+              let _'cont27 = fun _'a26 -> _'a26 in global:rev _'a24 _'cont27
+          in
+          (fun _'a8 _'k10 ->
+             (_'k10 (fun _'a9 _'k11 -> (_'k11 (Cons (_'a8, _'a9)))))) 1 _'a22 _'cont25
+      in
+      (fun _'a12 _'k14 ->
+         (_'k14 (fun _'a13 _'k15 -> (_'k15 (Cons (_'a12, _'a13)))))) 2 _'a20 _'cont23
+  in
+  (fun _'a16 _'k18 ->
+     (_'k18 (fun _'a17 _'k19 -> (_'k19 (Cons (_'a16, _'a17)))))) 3 Nil _'cont21;;

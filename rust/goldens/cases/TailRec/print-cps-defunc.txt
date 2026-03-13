@@ -1,0 +1,13 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam1, x, s, _'k0 ->
+        match x with
+        | Nil -> (_'defunc_apply _'k0 s)
+        | Cons (xh, xt) -> (_'defunc_apply global:sum xt (xh + s) _'k0)
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec sum = `C_'lam1 in ();;

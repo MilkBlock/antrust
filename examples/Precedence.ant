@@ -1,0 +1,14 @@
+let f =
+  fun x -> x;;
+let g =
+  fun x -> ();;
+let x =
+  0;;
+let _ =
+  f (if true then 1 else 2);;
+let _ =
+  f (let x = 1 in x);;
+let _ =
+  f (match x with | 0 -> 1 | _ -> 2);;
+let _ =
+  f (g 1; g 2);;

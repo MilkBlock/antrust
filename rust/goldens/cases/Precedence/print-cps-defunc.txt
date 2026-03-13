@@ -1,0 +1,45 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | (`C_'lam24 (f, g)), _'a11 ->
+        _'a11;
+        let _'cont14 = `C_'lam25 f in
+        _'defunc_apply global:g 2 `C_'lam25
+      | (`C_'lam25 (f)), _'a13 ->
+        let _'cont16 = `C_'lam26 in
+        _'defunc_apply global:f _'a13 `C_'lam26
+      | `C_'lam26, _'a15 -> _'a15
+      | `C_'lam23, _'a9 -> _'a9
+      | `C_'lam22, _'a7 -> _'a7
+      | (`C_'lam19 (f)), _'a3 ->
+        let _'cont6 = `C_'lam20 in
+        _'defunc_apply global:f _'a3 `C_'lam20
+      | `C_'lam20, _'a5 -> _'a5
+      | `C_'lam21, _'k2 ->
+        if true
+        then
+          (_'defunc_apply _'k2 1)
+        else
+          (_'defunc_apply _'k2 2)
+      | `C_'lam18, x, _'k1 -> (_'defunc_apply _'k1 ())
+      | `C_'lam17, x, _'k0 -> (_'defunc_apply _'k0 x)
+  in
+  _'defunc_apply;;
+let f =
+  `C_'lam17;;
+let g =
+  `C_'lam18;;
+let x =
+  0;;
+let _ =
+  let _'cont4 = `C_'lam19 f in _'defunc_apply `C_'lam21 `C_'lam19;;
+let _ =
+  let x = 1 in
+  let _'cont8 = `C_'lam22 in _'defunc_apply global:f x `C_'lam22;;
+let _ =
+  let _'cont10 = `C_'lam23 in
+  _'defunc_apply global:f (match global:x with | 0 -> 1 | _ -> 2) `C_'lam23;;
+let _ =
+  let _'cont12 = `C_'lam24 (f, g) in
+  _'defunc_apply global:g 1 `C_'lam24;;

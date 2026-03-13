@@ -1,0 +1,11 @@
+type int_list =
+  | Nil
+  | Cons of int * int_list;;
+
+let rec last = fun xs ->
+  match xs with
+  | Nil -> 0
+  | Cons (xh, xt) ->
+      match xt with
+      | Nil -> xh
+      | Cons _ yt -> last xt;;

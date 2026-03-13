@@ -1,0 +1,6 @@
+(* f (('f) -> 'g) -> 'h *)
+let f =
+  let rec f = fun g -> (f (fun x -> (g x))) in f;;
+(* _ 'f *)
+let _ =
+  global:f (fun x -> x);;

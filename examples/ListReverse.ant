@@ -1,0 +1,12 @@
+type int_list =
+  | Nil
+  | Cons of int * int_list;;
+
+let rec rev_aux = fun xs acc ->
+  match xs with
+  | Nil -> acc
+  | Cons xh xt -> rev_aux xt (Cons xh acc);;
+
+let rev = fun xs -> rev_aux xs Nil;;
+
+let _ = rev (Cons 1 (Cons 2 (Cons 3 Nil)));;

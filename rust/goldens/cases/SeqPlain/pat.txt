@@ -1,0 +1,13 @@
+pattern matrix:
+arity = 1
+  occurrence = \
+  (_) -> 0
+pattern matrix:
+arity = 1
+  occurrence = \
+  (Nil) -> 0
+  (Cons (_, tl)) -> 1
+pattern matrix:
+arity = 1
+  occurrence = \
+  (len) -> 0

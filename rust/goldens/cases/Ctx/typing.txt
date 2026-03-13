@@ -1,0 +1,19 @@
+(* Z: nat *)
+(* S: (nat) -> nat *)
+type nat = | Z | S of nat;;
+(* Nil: list 'a *)
+(* Cons: ('b, list 'b) -> list 'b *)
+type 'a list = | Nil | Cons of 'a * 'a list;;
+(* None: option 'a *)
+(* Some: ('b) -> option 'b *)
+type 'a option = | None | Some of 'a;;
+(* index (list 'n, nat) -> option 'n *)
+let rec index =
+  fun x n ->
+    match x with
+    | Cons (xh, xt) ->
+      match n with | Z -> (Some xh) | S (m) -> (global:index xt m)
+    | _ -> None;;
+(* _ option 'a *)
+let _ =
+  global:index Nil Z;;

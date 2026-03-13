@@ -1,0 +1,5 @@
+type int_list  = Nil| Cons of (int) * (int_list);;
+
+let rec (keep) = fun (xs) -> (match xs with (Nil) -> (Nil)| (ys) -> (ys));;
+
+let () = ignore ((keep) (Cons ((1), (Nil))))

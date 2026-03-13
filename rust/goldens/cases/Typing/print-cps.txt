@@ -1,0 +1,32 @@
+let _ =
+  fun x _'k0 -> (_'k0 x);;
+let id =
+  fun x _'k1 -> (_'k1 x);;
+let _ =
+  fun x _'k2 -> (_'k2 (fun y _'k3 -> (x y _'k3)));;
+let _ =
+  let x = fun x _'k4 -> (_'k4 x) in x;;
+let _ =
+  let x = global:id in x;;
+let _ =
+  let y = fun z _'k5 -> (_'k5 z) in y;;
+let _ =
+  fun x _'k6 -> let y = fun z _'k7 -> (_'k7 z) in _'k6 y;;
+let _ =
+  fun x _'k8 ->
+    let y = fun z _'k9 -> (_'k9 z) in
+    let _'cont11 = fun _'a10 -> (_'k8 _'a10) in y x _'cont11;;
+let _ =
+  fun x _'k12 -> (x (fun y _'k13 -> (_'k13 y)) _'k12);;
+let _ =
+  ((fun x _'k14 -> (_'k14 x)), (fun x _'k15 -> (_'k15 x)));;
+let _ =
+  fun x _'k16 -> (_'k16 (x + 1));;
+let _ =
+  1 + 1;;
+let _ =
+  (1, 1);;
+type 'a list = | Nil | Cons of 'a * 'a list;;
+type ('a,'b) pair = | P of 'a * 'b;;
+type enum1 = | A of int list | B of (int,unit) pair;;
+type enum2 = | C of int list;;

@@ -1,0 +1,43 @@
+(* Nil: int_list *)
+(* Cons: (int, int_list) -> int_list *)
+type int_list = | Nil | Cons of int * int_list;;
+(* len (int_list) -> int *)
+let rec len =
+  fun xs ->
+    match xs with | Nil -> 0 | Cons (_, tl) -> (1 + (global:len tl));;
+(* _ int *)
+let _ =
+  global:len (Cons (1, (Cons (2, Nil))));;let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | (`C_'lam19 (len)), _'a11 ->
+        let _'cont14 = `C_'lam20 len in
+        _'defunc_apply `C_'lam22 1 _'a11 `C_'lam20
+      | (`C_'lam20 (len)), _'a13 ->
+        let _'cont16 = `C_'lam21 in
+        _'defunc_apply global:len _'a13 `C_'lam21
+      | `C_'lam21, _'a15 -> _'a15
+      | `C_'lam22, _'a3, _'k5 ->
+        (_'defunc_apply _'k5 (`C_'lam23 _'a3))
+      | (`C_'lam23 (_'a3)), _'a4, _'k6 ->
+        (_'defunc_apply _'k6 (Cons (_'a3, _'a4)))
+      | `C_'lam24, _'a7, _'k9 ->
+        (_'defunc_apply _'k9 (`C_'lam25 _'a7))
+      | (`C_'lam25 (_'a7)), _'a8, _'k10 ->
+        (_'defunc_apply _'k10 (Cons (_'a7, _'a8)))
+      | `C_'lam17, xs, _'k0 ->
+        match xs with
+        | Nil -> (_'defunc_apply _'k0 0)
+        | Cons (_, tl) ->
+          let _'cont2 = `C_'lam18 _'k0 in
+          _'defunc_apply global:len tl `C_'lam18
+      | (`C_'lam18 (_'k0)), _'a1 -> (_'defunc_apply _'k0 (1 + _'a1))
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec len = `C_'lam17 in ();;
+let _ =
+  let _'cont12 = `C_'lam19 len in
+  _'defunc_apply `C_'lam24 2 Nil `C_'lam19;;

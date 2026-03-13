@@ -1,0 +1,17 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam0, xs, ys ->
+        match xs with
+        | Nil -> Nil
+        | Cons (xh, xt) ->
+          match ys with
+          | Nil -> Nil
+          | Cons (yh, yt) ->
+            (Cons ((xh + yh), (_'defunc_apply global:zip_add xt yt)))
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec zip_add = `C_'lam0 in ();;

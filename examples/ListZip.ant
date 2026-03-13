@@ -1,0 +1,11 @@
+type int_list =
+  | Nil
+  | Cons of int * int_list;;
+
+let rec zip_add = fun xs ys ->
+  match xs with
+  | Nil -> Nil
+  | Cons xh xt ->
+      match ys with
+      | Nil -> Nil
+      | Cons yh yt -> Cons (xh + yh) (zip_add xt yt);;

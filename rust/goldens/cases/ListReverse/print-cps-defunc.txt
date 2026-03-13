@@ -1,0 +1,50 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | (`C_'lam33 (rev)), _'a20 ->
+        let _'cont23 = `C_'lam34 rev in
+        _'defunc_apply `C_'lam39 2 _'a20 `C_'lam34
+      | (`C_'lam34 (rev)), _'a22 ->
+        let _'cont25 = `C_'lam35 rev in
+        _'defunc_apply `C_'lam37 1 _'a22 `C_'lam35
+      | (`C_'lam35 (rev)), _'a24 ->
+        let _'cont27 = `C_'lam36 in
+        _'defunc_apply global:rev _'a24 `C_'lam36
+      | `C_'lam36, _'a26 -> _'a26
+      | `C_'lam37, _'a8, _'k10 ->
+        (_'defunc_apply _'k10 (`C_'lam38 _'a8))
+      | (`C_'lam38 (_'a8)), _'a9, _'k11 ->
+        (_'defunc_apply _'k11 (Cons (_'a8, _'a9)))
+      | `C_'lam39, _'a12, _'k14 ->
+        (_'defunc_apply _'k14 (`C_'lam40 _'a12))
+      | (`C_'lam40 (_'a12)), _'a13, _'k15 ->
+        (_'defunc_apply _'k15 (Cons (_'a12, _'a13)))
+      | `C_'lam41, _'a16, _'k18 ->
+        (_'defunc_apply _'k18 (`C_'lam42 _'a16))
+      | (`C_'lam42 (_'a16)), _'a17, _'k19 ->
+        (_'defunc_apply _'k19 (Cons (_'a16, _'a17)))
+      | (`C_'lam32 (rev_aux)), xs, _'k7 ->
+        (_'defunc_apply global:rev_aux xs Nil _'k7)
+      | `C_'lam28, xs, acc, _'k0 ->
+        match xs with
+        | Nil -> (_'defunc_apply _'k0 acc)
+        | Cons (xh, xt) ->
+          let _'cont6 = `C_'lam29 (_'k0, xt) in
+          _'defunc_apply `C_'lam30 xh acc `C_'lam29
+      | (`C_'lam29 (_'k0, xt)), _'a5 ->
+        (_'defunc_apply global:rev_aux xt _'a5 _'k0)
+      | `C_'lam30, _'a1, _'k3 ->
+        (_'defunc_apply _'k3 (`C_'lam31 _'a1))
+      | (`C_'lam31 (_'a1)), _'a2, _'k4 ->
+        (_'defunc_apply _'k4 (Cons (_'a1, _'a2)))
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec rev_aux = `C_'lam28 in ();;
+let rev =
+  `C_'lam32 rev_aux;;
+let _ =
+  let _'cont21 = `C_'lam33 rev in
+  _'defunc_apply `C_'lam41 3 Nil `C_'lam33;;

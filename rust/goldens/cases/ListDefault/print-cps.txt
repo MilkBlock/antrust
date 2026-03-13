@@ -1,0 +1,11 @@
+type int_list = | Nil | Cons of int * int_list;;
+let rec keep =
+  fun xs _'k0 ->
+    match xs with | Nil -> (_'k0 Nil) | ys -> (_'k0 ys);;
+let _ =
+  let _'cont6 =
+    fun _'a5 ->
+      let _'cont8 = fun _'a7 -> _'a7 in global:keep _'a5 _'cont8
+  in
+  (fun _'a1 _'k3 ->
+     (_'k3 (fun _'a2 _'k4 -> (_'k4 (Cons (_'a1, _'a2)))))) 1 Nil _'cont6;;

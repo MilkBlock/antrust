@@ -1,0 +1,29 @@
+(* Nil: int_list *)
+(* Cons: (int, int_list) -> int_list *)
+type int_list = | Nil | Cons of int * int_list;;
+(* len (int_list) -> int *)
+let rec len =
+  fun xs ->
+    match xs with | Nil -> 0 | Cons (_, tl) -> (1 + (global:len tl));;
+(* _ int *)
+let _ =
+  global:len (Cons (1, (Cons (2, Nil))));;type int_list = | Nil | Cons of int * int_list;;
+let rec len =
+  fun xs _'k0 ->
+    match xs with
+    | Nil -> (_'k0 0)
+    | Cons (_, tl) ->
+      let _'cont2 = fun _'a1 -> (_'k0 (1 + _'a1)) in
+      global:len tl _'cont2;;
+let _ =
+  let _'cont12 =
+    fun _'a11 ->
+      let _'cont14 =
+        fun _'a13 ->
+          let _'cont16 = fun _'a15 -> _'a15 in global:len _'a13 _'cont16
+      in
+      (fun _'a3 _'k5 ->
+         (_'k5 (fun _'a4 _'k6 -> (_'k6 (Cons (_'a3, _'a4)))))) 1 _'a11 _'cont14
+  in
+  (fun _'a7 _'k9 ->
+     (_'k9 (fun _'a8 _'k10 -> (_'k10 (Cons (_'a7, _'a8)))))) 2 Nil _'cont12;;

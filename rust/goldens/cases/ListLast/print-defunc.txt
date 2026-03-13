@@ -1,0 +1,16 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam0, xs ->
+        match xs with
+        | Nil -> 0
+        | Cons (xh, xt) ->
+          match xt with
+          | Nil -> xh
+          | Cons (_, yt) -> (_'defunc_apply global:last xt)
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec last = `C_'lam0 in ();;

@@ -1,0 +1,1750 @@
+{
+  "cases": [
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-ast",
+      "output": "rust/goldens/cases/Test/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-ast.stderr",
+      "stdout": "rust/goldens/cases/Test/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Typing.ant",
+      "name": "Typing/print-ast",
+      "output": "rust/goldens/cases/Typing/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Typing/print-ast.stderr",
+      "stdout": "rust/goldens/cases/Typing/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Pat.ant",
+      "name": "Pat/print-ast",
+      "output": "rust/goldens/cases/Pat/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Pat/print-ast.stderr",
+      "stdout": "rust/goldens/cases/Pat/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Ctx.ant",
+      "name": "Ctx/print-ast",
+      "output": "rust/goldens/cases/Ctx/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Ctx/print-ast.stderr",
+      "stdout": "rust/goldens/cases/Ctx/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Syntax.ant",
+      "name": "Syntax/print-ast",
+      "output": "rust/goldens/cases/Syntax/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Syntax/print-ast.stderr",
+      "stdout": "rust/goldens/cases/Syntax/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Precedence.ant",
+      "name": "Precedence/print-ast",
+      "output": "rust/goldens/cases/Precedence/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Precedence/print-ast.stderr",
+      "stdout": "rust/goldens/cases/Precedence/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Live.ant",
+      "name": "Live/print-ast",
+      "output": "rust/goldens/cases/Live/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Live/print-ast.stderr",
+      "stdout": "rust/goldens/cases/Live/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecGroup.ant",
+      "name": "DefuncRecGroup/print-ast",
+      "output": "rust/goldens/cases/DefuncRecGroup/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecGroup/print-ast.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecGroup/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecSingle.ant",
+      "name": "DefuncRecSingle/print-ast",
+      "output": "rust/goldens/cases/DefuncRecSingle/print-ast.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecSingle/print-ast.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecSingle/print-ast.stdout"
+    },
+    {
+      "args": [
+        "--print-ast",
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-ast-typing",
+      "output": "rust/goldens/cases/Test/print-ast-typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-ast-typing.stderr",
+      "stdout": "rust/goldens/cases/Test/print-ast-typing.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/typing",
+      "output": "rust/goldens/cases/Test/typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/typing.stderr",
+      "stdout": "rust/goldens/cases/Test/typing.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Typing.ant",
+      "name": "Typing/typing",
+      "output": "rust/goldens/cases/Typing/typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Typing/typing.stderr",
+      "stdout": "rust/goldens/cases/Typing/typing.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Pat.ant",
+      "name": "Pat/typing",
+      "output": "rust/goldens/cases/Pat/typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Pat/typing.stderr",
+      "stdout": "rust/goldens/cases/Pat/typing.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Ctx.ant",
+      "name": "Ctx/typing",
+      "output": "rust/goldens/cases/Ctx/typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Ctx/typing.stderr",
+      "stdout": "rust/goldens/cases/Ctx/typing.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Live.ant",
+      "name": "Live/typing",
+      "output": "rust/goldens/cases/Live/typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Live/typing.stderr",
+      "stdout": "rust/goldens/cases/Live/typing.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecGroup.ant",
+      "name": "DefuncRecGroup/typing",
+      "output": "rust/goldens/cases/DefuncRecGroup/typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecGroup/typing.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecGroup/typing.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecSingle.ant",
+      "name": "DefuncRecSingle/typing",
+      "output": "rust/goldens/cases/DefuncRecSingle/typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecSingle/typing.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecSingle/typing.stdout"
+    },
+    {
+      "args": [
+        "--typing",
+        "-L"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/typing-level",
+      "output": "rust/goldens/cases/Test/typing-level.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/typing-level.stderr",
+      "stdout": "rust/goldens/cases/Test/typing-level.stdout"
+    },
+    {
+      "args": [
+        "--typing",
+        "-L"
+      ],
+      "exit_code": 0,
+      "input": "examples/Typing.ant",
+      "name": "Typing/typing-level",
+      "output": "rust/goldens/cases/Typing/typing-level.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Typing/typing-level.stderr",
+      "stdout": "rust/goldens/cases/Typing/typing-level.stdout"
+    },
+    {
+      "args": [
+        "--typing",
+        "-L"
+      ],
+      "exit_code": 0,
+      "input": "examples/Pat.ant",
+      "name": "Pat/typing-level",
+      "output": "rust/goldens/cases/Pat/typing-level.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Pat/typing-level.stderr",
+      "stdout": "rust/goldens/cases/Pat/typing-level.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/Pat.ant",
+      "name": "Pat/print-cps",
+      "output": "rust/goldens/cases/Pat/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Pat/print-cps.stderr",
+      "stdout": "rust/goldens/cases/Pat/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-cps",
+      "output": "rust/goldens/cases/Test/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-cps.stderr",
+      "stdout": "rust/goldens/cases/Test/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/TailRec.ant",
+      "name": "TailRec/print-cps",
+      "output": "rust/goldens/cases/TailRec/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/TailRec/print-cps.stderr",
+      "stdout": "rust/goldens/cases/TailRec/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/Typing.ant",
+      "name": "Typing/print-cps",
+      "output": "rust/goldens/cases/Typing/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Typing/print-cps.stderr",
+      "stdout": "rust/goldens/cases/Typing/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/Syntax.ant",
+      "name": "Syntax/print-cps",
+      "output": "rust/goldens/cases/Syntax/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Syntax/print-cps.stderr",
+      "stdout": "rust/goldens/cases/Syntax/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/Precedence.ant",
+      "name": "Precedence/print-cps",
+      "output": "rust/goldens/cases/Precedence/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Precedence/print-cps.stderr",
+      "stdout": "rust/goldens/cases/Precedence/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/print-cps",
+      "output": "rust/goldens/cases/SeqPlain/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/print-cps.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/ShadowKeep.ant",
+      "name": "ShadowKeep/print-cps",
+      "output": "rust/goldens/cases/ShadowKeep/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ShadowKeep/print-cps.stderr",
+      "stdout": "rust/goldens/cases/ShadowKeep/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/Live.ant",
+      "name": "Live/print-cps",
+      "output": "rust/goldens/cases/Live/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Live/print-cps.stderr",
+      "stdout": "rust/goldens/cases/Live/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/print-cps",
+      "output": "rust/goldens/cases/ListAppend/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/print-cps.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/print-cps",
+      "output": "rust/goldens/cases/ListReverse/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/print-cps.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/print-cps",
+      "output": "rust/goldens/cases/ListZip/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/print-cps.stderr",
+      "stdout": "rust/goldens/cases/ListZip/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/print-cps",
+      "output": "rust/goldens/cases/ListCountZero/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/print-cps.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListDefault.ant",
+      "name": "ListDefault/print-cps",
+      "output": "rust/goldens/cases/ListDefault/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListDefault/print-cps.stderr",
+      "stdout": "rust/goldens/cases/ListDefault/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-cps"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/print-cps",
+      "output": "rust/goldens/cases/ListLast/print-cps.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/print-cps.stderr",
+      "stdout": "rust/goldens/cases/ListLast/print-cps.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Pat.ant",
+      "name": "Pat/print-defunc",
+      "output": "rust/goldens/cases/Pat/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Pat/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/Pat/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-defunc",
+      "output": "rust/goldens/cases/Test/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/Test/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/TailRec.ant",
+      "name": "TailRec/print-defunc",
+      "output": "rust/goldens/cases/TailRec/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/TailRec/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/TailRec/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Typing.ant",
+      "name": "Typing/print-defunc",
+      "output": "rust/goldens/cases/Typing/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Typing/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/Typing/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Syntax.ant",
+      "name": "Syntax/print-defunc",
+      "output": "rust/goldens/cases/Syntax/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Syntax/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/Syntax/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Precedence.ant",
+      "name": "Precedence/print-defunc",
+      "output": "rust/goldens/cases/Precedence/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Precedence/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/Precedence/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/print-defunc",
+      "output": "rust/goldens/cases/SeqPlain/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ShadowKeep.ant",
+      "name": "ShadowKeep/print-defunc",
+      "output": "rust/goldens/cases/ShadowKeep/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ShadowKeep/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/ShadowKeep/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Live.ant",
+      "name": "Live/print-defunc",
+      "output": "rust/goldens/cases/Live/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Live/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/Live/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecGroup.ant",
+      "name": "DefuncRecGroup/print-defunc",
+      "output": "rust/goldens/cases/DefuncRecGroup/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecGroup/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecGroup/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecSingle.ant",
+      "name": "DefuncRecSingle/print-defunc",
+      "output": "rust/goldens/cases/DefuncRecSingle/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecSingle/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecSingle/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/print-defunc",
+      "output": "rust/goldens/cases/ListAppend/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/print-defunc",
+      "output": "rust/goldens/cases/ListReverse/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/print-defunc",
+      "output": "rust/goldens/cases/ListZip/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListZip/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/print-defunc",
+      "output": "rust/goldens/cases/ListCountZero/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListDefault.ant",
+      "name": "ListDefault/print-defunc",
+      "output": "rust/goldens/cases/ListDefault/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListDefault/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListDefault/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/print-defunc",
+      "output": "rust/goldens/cases/ListLast/print-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/print-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListLast/print-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Pat.ant",
+      "name": "Pat/print-cps-defunc",
+      "output": "rust/goldens/cases/Pat/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Pat/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/Pat/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-cps-defunc",
+      "output": "rust/goldens/cases/Test/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/Test/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/TailRec.ant",
+      "name": "TailRec/print-cps-defunc",
+      "output": "rust/goldens/cases/TailRec/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/TailRec/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/TailRec/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Typing.ant",
+      "name": "Typing/print-cps-defunc",
+      "output": "rust/goldens/cases/Typing/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Typing/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/Typing/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Syntax.ant",
+      "name": "Syntax/print-cps-defunc",
+      "output": "rust/goldens/cases/Syntax/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Syntax/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/Syntax/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Precedence.ant",
+      "name": "Precedence/print-cps-defunc",
+      "output": "rust/goldens/cases/Precedence/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Precedence/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/Precedence/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/print-cps-defunc",
+      "output": "rust/goldens/cases/SeqPlain/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ShadowKeep.ant",
+      "name": "ShadowKeep/print-cps-defunc",
+      "output": "rust/goldens/cases/ShadowKeep/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ShadowKeep/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/ShadowKeep/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Live.ant",
+      "name": "Live/print-cps-defunc",
+      "output": "rust/goldens/cases/Live/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Live/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/Live/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecGroup.ant",
+      "name": "DefuncRecGroup/print-cps-defunc",
+      "output": "rust/goldens/cases/DefuncRecGroup/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecGroup/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecGroup/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/Defunctionalize/RecSingle.ant",
+      "name": "DefuncRecSingle/print-cps-defunc",
+      "output": "rust/goldens/cases/DefuncRecSingle/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/DefuncRecSingle/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/DefuncRecSingle/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/print-cps-defunc",
+      "output": "rust/goldens/cases/ListAppend/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/print-cps-defunc",
+      "output": "rust/goldens/cases/ListReverse/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/print-cps-defunc",
+      "output": "rust/goldens/cases/ListZip/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListZip/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/print-cps-defunc",
+      "output": "rust/goldens/cases/ListCountZero/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListDefault.ant",
+      "name": "ListDefault/print-cps-defunc",
+      "output": "rust/goldens/cases/ListDefault/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListDefault/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListDefault/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/print-cps-defunc",
+      "output": "rust/goldens/cases/ListLast/print-cps-defunc.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/print-cps-defunc.stderr",
+      "stdout": "rust/goldens/cases/ListLast/print-cps-defunc.stdout"
+    },
+    {
+      "args": [
+        "--print-cps",
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-cps-typing",
+      "output": "rust/goldens/cases/Test/print-cps-typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-cps-typing.stderr",
+      "stdout": "rust/goldens/cases/Test/print-cps-typing.stdout"
+    },
+    {
+      "args": [
+        "--print-cps",
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/print-cps-typing",
+      "output": "rust/goldens/cases/SeqPlain/print-cps-typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/print-cps-typing.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/print-cps-typing.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc",
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-defunc-typing",
+      "output": "rust/goldens/cases/Test/print-defunc-typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-defunc-typing.stderr",
+      "stdout": "rust/goldens/cases/Test/print-defunc-typing.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc",
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/print-defunc-typing",
+      "output": "rust/goldens/cases/SeqPlain/print-defunc-typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/print-defunc-typing.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/print-defunc-typing.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc",
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-cps-defunc-typing",
+      "output": "rust/goldens/cases/Test/print-cps-defunc-typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-cps-defunc-typing.stderr",
+      "stdout": "rust/goldens/cases/Test/print-cps-defunc-typing.stdout"
+    },
+    {
+      "args": [
+        "--print-cps-defunc",
+        "--typing"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/print-cps-defunc-typing",
+      "output": "rust/goldens/cases/SeqPlain/print-cps-defunc-typing.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/print-cps-defunc-typing.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/print-cps-defunc-typing.stdout"
+    },
+    {
+      "args": [
+        "--print-cps",
+        "--typing",
+        "-L"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/print-cps-typing-level",
+      "output": "rust/goldens/cases/Test/print-cps-typing-level.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/print-cps-typing-level.stderr",
+      "stdout": "rust/goldens/cases/Test/print-cps-typing-level.stdout"
+    },
+    {
+      "args": [
+        "--print-cps",
+        "--typing",
+        "-L"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/print-cps-typing-level",
+      "output": "rust/goldens/cases/SeqPlain/print-cps-typing-level.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/print-cps-typing-level.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/print-cps-typing-level.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/compile",
+      "output": "rust/goldens/cases/Test/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/compile.stderr",
+      "stdout": "rust/goldens/cases/Test/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/TailRec.ant",
+      "name": "TailRec/compile",
+      "output": "rust/goldens/cases/TailRec/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/TailRec/compile.stderr",
+      "stdout": "rust/goldens/cases/TailRec/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/Syntax.ant",
+      "name": "Syntax/compile",
+      "output": "rust/goldens/cases/Syntax/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Syntax/compile.stderr",
+      "stdout": "rust/goldens/cases/Syntax/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/Precedence.ant",
+      "name": "Precedence/compile",
+      "output": "rust/goldens/cases/Precedence/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Precedence/compile.stderr",
+      "stdout": "rust/goldens/cases/Precedence/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/ShadowKeep.ant",
+      "name": "ShadowKeep/compile",
+      "output": "rust/goldens/cases/ShadowKeep/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ShadowKeep/compile.stderr",
+      "stdout": "rust/goldens/cases/ShadowKeep/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/compile",
+      "output": "rust/goldens/cases/SeqPlain/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/compile.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/compile",
+      "output": "rust/goldens/cases/ListAppend/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/compile.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/compile",
+      "output": "rust/goldens/cases/ListReverse/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/compile.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/compile",
+      "output": "rust/goldens/cases/ListZip/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/compile.stderr",
+      "stdout": "rust/goldens/cases/ListZip/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/compile",
+      "output": "rust/goldens/cases/ListCountZero/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/compile.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/compile",
+      "output": "rust/goldens/cases/ListLast/compile.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/compile.stderr",
+      "stdout": "rust/goldens/cases/ListLast/compile.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/compile-memo",
+      "output": "rust/goldens/cases/Test/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/Test/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/TailRec.ant",
+      "name": "TailRec/compile-memo",
+      "output": "rust/goldens/cases/TailRec/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/TailRec/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/TailRec/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/Syntax.ant",
+      "name": "Syntax/compile-memo",
+      "output": "rust/goldens/cases/Syntax/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Syntax/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/Syntax/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/Precedence.ant",
+      "name": "Precedence/compile-memo",
+      "output": "rust/goldens/cases/Precedence/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Precedence/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/Precedence/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/ShadowKeep.ant",
+      "name": "ShadowKeep/compile-memo",
+      "output": "rust/goldens/cases/ShadowKeep/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ShadowKeep/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/ShadowKeep/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/compile-memo",
+      "output": "rust/goldens/cases/SeqPlain/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/compile-memo",
+      "output": "rust/goldens/cases/ListAppend/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/compile-memo",
+      "output": "rust/goldens/cases/ListReverse/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/compile-memo",
+      "output": "rust/goldens/cases/ListZip/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/ListZip/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/compile-memo",
+      "output": "rust/goldens/cases/ListCountZero/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "memo"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/compile-memo",
+      "output": "rust/goldens/cases/ListLast/compile-memo.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/compile-memo.stderr",
+      "stdout": "rust/goldens/cases/ListLast/compile-memo.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/compile-seq",
+      "output": "rust/goldens/cases/Test/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/Test/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/TailRec.ant",
+      "name": "TailRec/compile-seq",
+      "output": "rust/goldens/cases/TailRec/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/TailRec/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/TailRec/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/compile-seq",
+      "output": "rust/goldens/cases/SeqPlain/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/compile-seq",
+      "output": "rust/goldens/cases/ListAppend/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/compile-seq",
+      "output": "rust/goldens/cases/ListReverse/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/compile-seq",
+      "output": "rust/goldens/cases/ListZip/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/ListZip/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/compile-seq",
+      "output": "rust/goldens/cases/ListCountZero/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListDefault.ant",
+      "name": "ListDefault/compile-seq",
+      "output": "rust/goldens/cases/ListDefault/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListDefault/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/ListDefault/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/compile-seq",
+      "output": "rust/goldens/cases/ListLast/compile-seq.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/compile-seq.stderr",
+      "stdout": "rust/goldens/cases/ListLast/compile-seq.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/compile-plain",
+      "output": "rust/goldens/cases/Test/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/Test/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/TailRec.ant",
+      "name": "TailRec/compile-plain",
+      "output": "rust/goldens/cases/TailRec/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/TailRec/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/TailRec/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/compile-plain",
+      "output": "rust/goldens/cases/SeqPlain/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/compile-plain",
+      "output": "rust/goldens/cases/ListAppend/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/compile-plain",
+      "output": "rust/goldens/cases/ListReverse/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/compile-plain",
+      "output": "rust/goldens/cases/ListZip/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/ListZip/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/compile-plain",
+      "output": "rust/goldens/cases/ListCountZero/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListDefault.ant",
+      "name": "ListDefault/compile-plain",
+      "output": "rust/goldens/cases/ListDefault/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListDefault/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/ListDefault/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/compile-plain",
+      "output": "rust/goldens/cases/ListLast/compile-plain.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/compile-plain.stderr",
+      "stdout": "rust/goldens/cases/ListLast/compile-plain.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/Test.ant",
+      "name": "Test/pat",
+      "output": "rust/goldens/cases/Test/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Test/pat.stderr",
+      "stdout": "rust/goldens/cases/Test/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/Typing.ant",
+      "name": "Typing/pat",
+      "output": "rust/goldens/cases/Typing/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Typing/pat.stderr",
+      "stdout": "rust/goldens/cases/Typing/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/Pat.ant",
+      "name": "Pat/pat",
+      "output": "rust/goldens/cases/Pat/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/Pat/pat.stderr",
+      "stdout": "rust/goldens/cases/Pat/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/SeqPlain.ant",
+      "name": "SeqPlain/pat",
+      "output": "rust/goldens/cases/SeqPlain/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/SeqPlain/pat.stderr",
+      "stdout": "rust/goldens/cases/SeqPlain/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/ShadowKeep.ant",
+      "name": "ShadowKeep/pat",
+      "output": "rust/goldens/cases/ShadowKeep/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ShadowKeep/pat.stderr",
+      "stdout": "rust/goldens/cases/ShadowKeep/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListAppend.ant",
+      "name": "ListAppend/pat",
+      "output": "rust/goldens/cases/ListAppend/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListAppend/pat.stderr",
+      "stdout": "rust/goldens/cases/ListAppend/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListReverse.ant",
+      "name": "ListReverse/pat",
+      "output": "rust/goldens/cases/ListReverse/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListReverse/pat.stderr",
+      "stdout": "rust/goldens/cases/ListReverse/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListZip.ant",
+      "name": "ListZip/pat",
+      "output": "rust/goldens/cases/ListZip/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListZip/pat.stderr",
+      "stdout": "rust/goldens/cases/ListZip/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListCountZero.ant",
+      "name": "ListCountZero/pat",
+      "output": "rust/goldens/cases/ListCountZero/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListCountZero/pat.stderr",
+      "stdout": "rust/goldens/cases/ListCountZero/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListDefault.ant",
+      "name": "ListDefault/pat",
+      "output": "rust/goldens/cases/ListDefault/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListDefault/pat.stderr",
+      "stdout": "rust/goldens/cases/ListDefault/pat.stdout"
+    },
+    {
+      "args": [
+        "--pat"
+      ],
+      "exit_code": 0,
+      "input": "examples/ListLast.ant",
+      "name": "ListLast/pat",
+      "output": "rust/goldens/cases/ListLast/pat.txt",
+      "output_exists": true,
+      "stderr": "rust/goldens/cases/ListLast/pat.stderr",
+      "stdout": "rust/goldens/cases/ListLast/pat.stdout"
+    }
+  ],
+  "errors": [
+    {
+      "args": [
+        "--unknown-flag"
+      ],
+      "exit_code": 124,
+      "input": "examples/Test.ant",
+      "name": "unknown-flag",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/unknown-flag.stderr",
+      "stdout": "rust/goldens/errors/unknown-flag.stdout"
+    },
+    {
+      "args": [
+        "--typing"
+      ],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/typing-error.ant",
+      "name": "typing-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/typing-error.stderr",
+      "stdout": "rust/goldens/errors/typing-error.stdout"
+    },
+    {
+      "args": [
+        "--print-ast"
+      ],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/typing-error.ant",
+      "name": "typing-error-print-ast",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/typing-error-print-ast.stderr",
+      "stdout": "rust/goldens/errors/typing-error-print-ast.stdout"
+    },
+    {
+      "args": [],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/lexing-error.ant",
+      "name": "lexing-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/lexing-error.stderr",
+      "stdout": "rust/goldens/errors/lexing-error.stdout"
+    },
+    {
+      "args": [],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/syntax-error.ant",
+      "name": "syntax-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/syntax-error.stderr",
+      "stdout": "rust/goldens/errors/syntax-error.stdout"
+    },
+    {
+      "args": [],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/keyword-identifier-error.ant",
+      "name": "keyword-identifier-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/keyword-identifier-error.stderr",
+      "stdout": "rust/goldens/errors/keyword-identifier-error.stdout"
+    },
+    {
+      "args": [],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/missing-in-error.ant",
+      "name": "missing-in-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/missing-in-error.stderr",
+      "stdout": "rust/goldens/errors/missing-in-error.stdout"
+    },
+    {
+      "args": [],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/missing-paren-error.ant",
+      "name": "missing-paren-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/missing-paren-error.stderr",
+      "stdout": "rust/goldens/errors/missing-paren-error.stdout"
+    },
+    {
+      "args": [],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/truncated-let-error.ant",
+      "name": "truncated-let-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/truncated-let-error.stderr",
+      "stdout": "rust/goldens/errors/truncated-let-error.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "plain"
+      ],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/compile-plain-error.ant",
+      "name": "compile-plain-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/compile-plain-error.stderr",
+      "stdout": "rust/goldens/errors/compile-plain-error.stdout"
+    },
+    {
+      "args": [
+        "--compile",
+        "-b",
+        "seq"
+      ],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/compile-seq-error.ant",
+      "name": "compile-seq-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/compile-seq-error.stderr",
+      "stdout": "rust/goldens/errors/compile-seq-error.stdout"
+    },
+    {
+      "args": [
+        "--print-defunc"
+      ],
+      "exit_code": 1,
+      "input": "rust/goldens/inputs/transform-error.ant",
+      "name": "transform-error",
+      "output": null,
+      "output_exists": false,
+      "stderr": "rust/goldens/errors/transform-error.stderr",
+      "stdout": "rust/goldens/errors/transform-error.stdout"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+type int_list =
+  | Nil
+  | Cons of int * int_list;;
+
+let rec append = fun xs ys ->
+  match xs with
+  | Nil -> ys
+  | Cons xh xt -> Cons xh (append xt ys);;
+
+let _ = append (Cons 1 Nil) (Cons 2 (Cons 3 Nil));;

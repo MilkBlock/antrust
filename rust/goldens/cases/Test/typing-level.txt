@@ -1,0 +1,9 @@
+(* Nil: int_list:0~0 *)
+(* Cons: (int, int_list:0~0) -> int_list:0~0:0~0 *)
+type int_list = | Nil | Cons of int * int_list;;
+(* list_incr (int_list:0~0) -> int_list:0~0:0~0 *)
+let rec list_incr =
+  fun x ->
+    match x with
+    | Nil -> Nil
+    | Cons (xh, xt) -> (Cons ((xh + 1), (global:list_incr xt)));;

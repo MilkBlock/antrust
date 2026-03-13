@@ -1,0 +1,20 @@
+pattern matrix:
+arity = 1
+  occurrence = \
+  (_) -> 0
+pattern matrix:
+arity = 1
+  occurrence = \
+  (x) -> 0
+pattern matrix:
+arity = 1
+  occurrence = \
+  (x) -> 0
+pattern matrix:
+arity = 1
+  occurrence = \
+  (f) -> 0
+pattern matrix:
+arity = 1
+  occurrence = \
+  (g) -> 0

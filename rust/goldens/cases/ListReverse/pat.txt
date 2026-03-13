@@ -1,0 +1,17 @@
+pattern matrix:
+arity = 1
+  occurrence = \
+  (_) -> 0
+pattern matrix:
+arity = 1
+  occurrence = \
+  (rev) -> 0
+pattern matrix:
+arity = 1
+  occurrence = \
+  (Nil) -> 0
+  (Cons (xh, xt)) -> 1
+pattern matrix:
+arity = 1
+  occurrence = \
+  (rev_aux) -> 0

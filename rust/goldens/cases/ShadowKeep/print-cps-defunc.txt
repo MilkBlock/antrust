@@ -1,0 +1,20 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam9, _'a4 -> _'a4
+      | (`C_'lam7 (g)), u, _'k1 ->
+        let x = 1 in
+        let x = 2 in
+        let _'cont3 = `C_'lam8 (_'k1, x) in
+        _'defunc_apply global:g 0 `C_'lam8
+      | (`C_'lam8 (_'k1, x)), _'a2 -> _'a2; (); _'defunc_apply _'k1 x
+      | `C_'lam6, x, _'k0 -> (_'defunc_apply _'k0 ())
+  in
+  _'defunc_apply;;
+let g =
+  `C_'lam6;;
+let f =
+  `C_'lam7 g;;
+let _ =
+  let _'cont5 = `C_'lam9 in _'defunc_apply global:f () `C_'lam9;;

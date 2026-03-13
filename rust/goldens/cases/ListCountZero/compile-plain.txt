@@ -1,0 +1,3 @@
+type int_list  = Nil| Cons of (int) * (int_list);;
+
+let rec (count_zero) = fun (xs) -> (match xs with (Nil) -> (0)| (Cons (xh, xt)) -> (match xh with (0) -> (((1)+((count_zero) (xt))))| (_) -> ((count_zero) (xt))))

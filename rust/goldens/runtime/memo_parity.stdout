@@ -1,0 +1,8 @@
+# seed
+took 4 step, but without memo take 4 step.
+# repeat
+took 1 step, but without memo take 4 step.
+# shared-prefix
+took 1 step, but without memo take 4 step.
+# fallback
+took 4 step, but without memo take 4 step.

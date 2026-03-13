@@ -1,0 +1,11 @@
+.DS_Store
+
+.vscode/
+
+# Rust build artifacts
+rust/target/
+
+# Python caches
+**/__pycache__/
+*.pyc
+

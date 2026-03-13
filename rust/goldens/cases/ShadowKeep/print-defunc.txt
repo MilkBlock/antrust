@@ -1,0 +1,15 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | (`C_'lam1 (g)), u ->
+        let x = 1 in let x = 2 in _'defunc_apply global:g 0; (); x
+      | `C_'lam0, x -> ()
+  in
+  _'defunc_apply;;
+let g =
+  `C_'lam0;;
+let f =
+  `C_'lam1 g;;
+let _ =
+  _'defunc_apply global:f ();;

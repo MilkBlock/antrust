@@ -1,0 +1,190 @@
+(* Z: nat *)
+(* S: (nat) -> nat *)
+type nat = | Z | S of nat;;
+(* Nil: list 'a *)
+(* Cons: ('b, list 'b) -> list 'b *)
+type 'a list = | Nil | Cons of 'a * 'a list;;
+(* None: option 'a *)
+(* Some: ('b) -> option 'b *)
+type 'a option = | None | Some of 'a;;
+(* EInt: (int) -> expr *)
+(* EPlus: (expr, expr) -> expr *)
+(* ELt: (expr, expr) -> expr *)
+(* ELe: (expr, expr) -> expr *)
+(* EGt: (expr, expr) -> expr *)
+(* EGe: (expr, expr) -> expr *)
+(* EVar: (nat) -> expr *)
+(* EAbs: (expr) -> expr *)
+(* EApp: (expr, expr) -> expr *)
+(* ELet: (expr, expr) -> expr *)
+(* ETrue: expr *)
+(* EFalse: expr *)
+(* EIf: (expr, expr, expr) -> expr *)
+(* ENil: expr *)
+(* ECons: (expr, expr) -> expr *)
+(* EMatchList: (expr, expr, expr) -> expr *)
+(* EPair: (expr, expr) -> expr *)
+(* EZro: (expr) -> expr *)
+(* EFst: (expr) -> expr *)
+(* EFix: (expr) -> expr *)
+(* EHole: (option int) -> expr *)
+type expr =
+  | EInt of int
+  | EPlus of expr * expr
+  | ELt of expr * expr
+  | ELe of expr * expr
+  | EGt of expr * expr
+  | EGe of expr * expr
+  | EVar of nat
+  | EAbs of expr
+  | EApp of expr * expr
+  | ELet of expr * expr
+  | ETrue
+  | EFalse
+  | EIf of expr * expr * expr
+  | ENil
+  | ECons of expr * expr
+  | EMatchList of expr * expr * expr
+  | EPair of expr * expr
+  | EZro of expr
+  | EFst of expr
+  | EFix of expr
+  | EHole of int option;;
+type value =
+  | VInt of int
+  | VAbs of expr * value list
+  | VTrue
+  | VFalse
+  | VNil
+  | VCons of value * value
+  | VPair of value * value
+  | VFix of expr * value list
+  | VStuck of stuck
+and vtype = | VTInt | VTFunc | VTBool | VTList | VTPair
+and stuck =
+  | SHole of int option * value list
+  | STypeError of value * vtype
+  | SIndexError
+  | SApp of stuck * expr
+  | SAdd0 of stuck * expr
+  | SAdd1 of value * stuck
+  | SGt0 of stuck * expr
+  | SGt1 of value * stuck
+  | SIf of stuck * expr * expr
+  | SMatchList of stuck * expr * expr
+  | SZro of stuck
+  | SFst of stuck;;
+(* index (list 'n, nat) -> option 'n *)
+let rec index =
+  fun x n ->
+    match x with
+    | Cons (xh, xt) ->
+      match n with | Z -> (Some xh) | S (m) -> (global:index xt m)
+    | _ -> None;;
+(* eval (expr, list value) -> value *)
+let rec eval =
+  fun expr env ->
+    match expr with
+    | EInt (i) -> (VInt i)
+    | EPlus (x, y) ->
+      let xv = global:eval x env in
+      match xv with
+      | VInt (xi) ->
+        let yv = global:eval y env in
+        match yv with
+        | VInt (yi) -> (VInt (xi + yi))
+        | VStuck (ys) -> (VStuck (SAdd1 (xv, ys)))
+        | _ -> (VStuck (STypeError (yv, VTInt)))
+      | VStuck (xs) -> (VStuck (SAdd0 (xs, y)))
+      | _ -> (VStuck (STypeError (xv, VTInt)))
+    | ELt (x, y) ->
+      let xv = global:eval x env in
+      match xv with
+      | VInt (xi) ->
+        let yv = global:eval y env in
+        match yv with
+        | VInt (yi) -> if (xi < yi) then VTrue else VFalse
+        | VStuck (ys) -> (VStuck (SGt1 (xv, ys)))
+        | _ -> (VStuck (STypeError (yv, VTInt)))
+      | VStuck (xs) -> (VStuck (SGt0 (xs, y)))
+      | _ -> (VStuck (STypeError (xv, VTInt)))
+    | ELe (x, y) ->
+      let xv = global:eval x env in
+      match xv with
+      | VInt (xi) ->
+        let yv = global:eval y env in
+        match yv with
+        | VInt (yi) -> if (xi <= yi) then VTrue else VFalse
+        | VStuck (ys) -> (VStuck (SGt1 (xv, ys)))
+        | _ -> (VStuck (STypeError (yv, VTInt)))
+      | VStuck (xs) -> (VStuck (SGt0 (xs, y)))
+      | _ -> (VStuck (STypeError (xv, VTInt)))
+    | EGt (x, y) ->
+      let xv = global:eval x env in
+      match xv with
+      | VInt (xi) ->
+        let yv = global:eval y env in
+        match yv with
+        | VInt (yi) -> if (xi > yi) then VTrue else VFalse
+        | VStuck (ys) -> (VStuck (SGt1 (xv, ys)))
+        | _ -> (VStuck (STypeError (yv, VTInt)))
+      | VStuck (xs) -> (VStuck (SGt0 (xs, y)))
+      | _ -> (VStuck (STypeError (xv, VTInt)))
+    | EGe (x, y) ->
+      let xv = global:eval x env in
+      match xv with
+      | VInt (xi) ->
+        let yv = global:eval y env in
+        match yv with
+        | VInt (yi) -> if (xi >= yi) then VTrue else VFalse
+        | VStuck (ys) -> (VStuck (SGt1 (xv, ys)))
+        | _ -> (VStuck (STypeError (yv, VTInt)))
+      | VStuck (xs) -> (VStuck (SGt0 (xs, y)))
+      | _ -> (VStuck (STypeError (xv, VTInt)))
+    | EVar (idx) ->
+      match global:index env idx with
+      | Some (v) -> v
+      | None -> (VStuck SIndexError)
+    | EAbs (e) -> (VAbs (e, env))
+    | ELet (lhs, rhs) ->
+      (global:eval rhs (Cons ((global:eval lhs env), env)))
+    | EFix (e) -> (VFix (e, env))
+    | EApp (f, x) ->
+      let fv = global:eval f env in
+      match fv with
+      | VAbs (e, env_) ->
+        (global:eval e (Cons ((global:eval x env), env_)))
+      | VFix (e, env_) ->
+        (global:eval e (Cons ((global:eval x env), (Cons (fv, env_)))))
+      | VStuck (fs) -> (VStuck (SApp (fs, x)))
+      | _ -> (VStuck (STypeError (fv, VTFunc)))
+    | EHole (x) -> (VStuck (SHole (x, env)))
+    | ETrue -> VTrue
+    | EFalse -> VFalse
+    | EIf (i, t, e) ->
+      match global:eval i env with
+      | VTrue -> (global:eval t env)
+      | VFalse -> (global:eval e env)
+      | VStuck (is) -> (VStuck (SIf (is, t, e)))
+      | iv -> (VStuck (STypeError (iv, VTBool)))
+    | ENil -> VNil
+    | ECons (x, xs) ->
+      (VCons ((global:eval x env), (global:eval xs env)))
+    | EPair (x, y) ->
+      (VPair ((global:eval x env), (global:eval y env)))
+    | EZro (p) ->
+      match global:eval p env with
+      | VPair (a, b) -> a
+      | VStuck (ps) -> (VStuck (SZro ps))
+      | pv -> (VStuck (STypeError (pv, VTPair)))
+    | EFst (p) ->
+      match global:eval p env with
+      | VPair (a, b) -> b
+      | VStuck (ps) -> (VStuck (SFst ps))
+      | pv -> (VStuck (STypeError (pv, VTPair)))
+    | EMatchList (v, n, c) ->
+      match global:eval v env with
+      | VNil -> (global:eval n env)
+      | VCons (x, xs) -> (global:eval c (Cons (xs, (Cons (x, env)))))
+      | VStuck (vs) -> (VStuck (SMatchList (vs, n, c)))
+      | vv -> (VStuck (STypeError (vv, VTList)));;

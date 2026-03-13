@@ -1,0 +1,109 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam36, _'a21 -> _'a21
+      | `C_'lam37, _'k20 ->
+        if true
+        then
+          (_'defunc_apply _'k20 (1 + 2))
+        else
+          if false
+          then
+            (_'defunc_apply _'k20 (3 + 4))
+          else
+            (_'defunc_apply _'k20 (5 + 6))
+      | `C_'lam34, _'a18 -> _'a18
+      | `C_'lam35, _'a16, _'k17 -> (_'defunc_apply _'k17 (Some _'a16))
+      | `C_'lam33, x, y, _'k15 ->
+        match x with
+        | S (x) -> (_'defunc_apply global:even x y _'k15)
+        | Z -> (_'defunc_apply _'k15 false)
+      | `C_'lam32, x, y, _'k14 ->
+        match x with
+        | S (x) -> (_'defunc_apply global:odd x y _'k14)
+        | Z -> (_'defunc_apply _'k14 true)
+      | `C_'lam31, x, _'k13 -> (_'defunc_apply global:f x _'k13)
+      | (`C_'lam29 (ignore)), _'a9 ->
+        _'a9;
+        let _'cont12 = `C_'lam30 in
+        _'defunc_apply global:ignore 20 `C_'lam30
+      | `C_'lam30, _'a11 -> _'a11; 30
+      | `C_'lam28, x, _'k8 -> (_'defunc_apply _'k8 ())
+      | `C_'lam26, x, _'k6 -> (_'defunc_apply _'k6 (`C_'lam27 x))
+      | (`C_'lam27 (x)), y, _'k7 -> (_'defunc_apply _'k7 (x + y))
+      | `C_'lam24, _'a4 -> _'a4
+      | `C_'lam25, _'a2, _'k3 -> (_'defunc_apply _'k3 (A _'a2))
+      | `C_'lam23, _'a0 -> _'a0
+  in
+  _'defunc_apply;;
+let _ =
+  ();;
+let _ =
+  4611686018427387903;;
+let _ =
+  true;;
+let _ =
+  false;;
+let _ =
+  let _'cont1 = `C_'lam23 in
+  _'defunc_apply print_endline "hello, world" `C_'lam23;;
+let _ =
+  let x = 10 in x;;
+type bin = | Zero | One;;
+type nat = | S of nat | Z;;
+type 'a list = | Nil | Cons of 'a * 'a list;;
+type ('a,'b) pair = | P of 'a * 'b;;
+type test = | CA of int list | CB of (int,unit) pair;;
+type 'a option = | None | Some of 'a;;
+type a = | KA of a
+and b = | KB of b;;
+type wrap_int = | A of int;;
+let _ =
+  let _'cont5 = `C_'lam24 in _'defunc_apply `C_'lam25 10 `C_'lam24;;
+let _ =
+  (1 + ((2 * 3) / 4)) + ((5 + 6) * 7);;
+let _ =
+  (1, 2, 3);;
+let _ =
+  (4, 5, 6);;
+let _ =
+  [1; 2; 3];;
+let f =
+  `C_'lam26;;
+let _ =
+  let x = 1 + 2 in let y = 2 + 4 in x + y;;
+let ignore =
+  `C_'lam28;;
+let _ =
+  let _'cont10 = `C_'lam29 ignore in
+  _'defunc_apply global:ignore 10 `C_'lam29;;
+let () =
+  let rec f = `C_'lam31 in ();;
+let () =
+  let rec even = `C_'lam32 and odd = `C_'lam33 in ();;
+let x =
+  10;;
+let y =
+  let _'cont19 = `C_'lam34 in
+  _'defunc_apply `C_'lam35 10 `C_'lam34;;
+let z =
+  (1, 2);;
+let w =
+  true;;
+let m =
+  ();;
+let _ =
+  match global:x with | 1 -> 2 | 2 -> 4 | 3 -> 8 | _ -> 16;;
+let _ =
+  match global:y with | Some (x) -> x | Some (_) -> 1 | None -> 0;;
+let _ =
+  match global:z with | 1, 2 -> 1 | 2, _ -> 2;;
+let _ =
+  match global:w with | true -> false | false -> true;;
+let _ =
+  match global:m with | () -> () | n -> n;;
+let _ =
+  let _'cont22 = `C_'lam36 in _'defunc_apply `C_'lam37 `C_'lam36;;
+let _ =
+  ();;

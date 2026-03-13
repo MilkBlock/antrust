@@ -1,0 +1,29 @@
+let x =
+  1;;
+let _ =
+  1;;
+let () =
+  ();;
+let x, y =
+  (1, 2);;
+let x, y =
+  (3, 4);;
+let (a, b), (c, d) =
+  ((5, 6), (7, 8));;
+type any =
+  | A of int * int
+  | B
+  | C of any
+  | D of any * any * any * any * any * any;;
+let rec f =
+  fun x _'k0 ->
+    match x with
+    | A (a, b) -> (_'k0 (a + b))
+    | A (a, b) -> (_'k0 (a + b))
+    | C (B) -> (_'k0 0)
+    | D (B, _, _, _, _, _) -> (_'k0 1)
+    | D (_, B, _, _, _, _) -> (_'k0 2)
+    | D (_, _, B, _, _, _) -> (_'k0 3)
+    | D (_, _, _, B, _, _) -> (_'k0 4)
+    | D (_, _, _, _, B, _) -> (_'k0 5)
+    | _ -> (_'k0 6);;

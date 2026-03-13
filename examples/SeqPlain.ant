@@ -1,0 +1,10 @@
+type int_list =
+  | Nil
+  | Cons of int * int_list;;
+
+let rec len = fun xs ->
+  match xs with
+  | Nil -> 0
+  | Cons _ tl -> 1 + len tl;;
+
+let _ = len (Cons 1 (Cons 2 Nil));;

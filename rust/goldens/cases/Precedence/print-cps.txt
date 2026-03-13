@@ -1,0 +1,29 @@
+let f =
+  fun x _'k0 -> (_'k0 x);;
+let g =
+  fun x _'k1 -> (_'k1 ());;
+let x =
+  0;;
+let _ =
+  let _'cont4 =
+    fun _'a3 ->
+      let _'cont6 = fun _'a5 -> _'a5 in global:f _'a3 _'cont6
+  in
+  (fun _'k2 -> if true then (_'k2 1) else (_'k2 2)) _'cont4;;
+let _ =
+  let x = 1 in
+  let _'cont8 = fun _'a7 -> _'a7 in global:f x _'cont8;;
+let _ =
+  let _'cont10 = fun _'a9 -> _'a9 in
+  global:f (match global:x with | 0 -> 1 | _ -> 2) _'cont10;;
+let _ =
+  let _'cont12 =
+    fun _'a11 ->
+      _'a11;
+      let _'cont14 =
+        fun _'a13 ->
+          let _'cont16 = fun _'a15 -> _'a15 in global:f _'a13 _'cont16
+      in
+      global:g 2 _'cont14
+  in
+  global:g 1 _'cont12;;

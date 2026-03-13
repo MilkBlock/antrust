@@ -1,0 +1,11 @@
+type int_list = | Nil | Cons of int * int_list;;
+let rec count_zero =
+  fun xs _'k0 ->
+    match xs with
+    | Nil -> (_'k0 0)
+    | Cons (xh, xt) ->
+      match xh with
+      | 0 ->
+        let _'cont2 = fun _'a1 -> (_'k0 (1 + _'a1)) in
+        global:count_zero xt _'cont2
+      | _ -> (global:count_zero xt _'k0);;

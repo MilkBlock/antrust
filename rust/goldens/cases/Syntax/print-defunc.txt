@@ -1,0 +1,87 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam5, x, y ->
+        match x with
+        | S (x) -> (_'defunc_apply global:even x y)
+        | Z -> false
+      | `C_'lam4, x, y ->
+        match x with
+        | S (x) -> (_'defunc_apply global:odd x y)
+        | Z -> true
+      | `C_'lam3, x -> (_'defunc_apply global:f x)
+      | `C_'lam2, x -> ()
+      | `C_'lam0, x -> (`C_'lam1 x)
+      | (`C_'lam1 (x)), y -> (x + y)
+  in
+  _'defunc_apply;;
+let _ =
+  ();;
+let _ =
+  4611686018427387903;;
+let _ =
+  true;;
+let _ =
+  false;;
+let _ =
+  _'defunc_apply print_endline "hello, world";;
+let _ =
+  let x = 10 in x;;
+type bin = | Zero | One;;
+type nat = | S of nat | Z;;
+type 'a list = | Nil | Cons of 'a * 'a list;;
+type ('a,'b) pair = | P of 'a * 'b;;
+type test = | CA of int list | CB of (int,unit) pair;;
+type 'a option = | None | Some of 'a;;
+type a = | KA of a
+and b = | KB of b;;
+type wrap_int = | A of int;;
+let _ =
+  A 10;;
+let _ =
+  (1 + ((2 * 3) / 4)) + ((5 + 6) * 7);;
+let _ =
+  (1, 2, 3);;
+let _ =
+  (4, 5, 6);;
+let _ =
+  [1; 2; 3];;
+let f =
+  `C_'lam0;;
+let _ =
+  let x = 1 + 2 in let y = 2 + 4 in x + y;;
+let ignore =
+  `C_'lam2;;
+let _ =
+  _'defunc_apply global:ignore 10;
+  _'defunc_apply global:ignore 20;
+  30;;
+let () =
+  let rec f = `C_'lam3 in ();;
+let () =
+  let rec even = `C_'lam4 and odd = `C_'lam5 in ();;
+let x =
+  10;;
+let y =
+  Some 10;;
+let z =
+  (1, 2);;
+let w =
+  true;;
+let m =
+  ();;
+let _ =
+  match global:x with | 1 -> 2 | 2 -> 4 | 3 -> 8 | _ -> 16;;
+let _ =
+  match global:y with | Some (x) -> x | Some (_) -> 1 | None -> 0;;
+let _ =
+  match global:z with | 1, 2 -> 1 | 2, _ -> 2;;
+let _ =
+  match global:w with | true -> false | false -> true;;
+let _ =
+  match global:m with | () -> () | n -> n;;
+let _ =
+  if true then (1 + 2) else if false then (3 + 4) else (5 + 6);;
+let _ =
+  ();;

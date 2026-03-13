@@ -1,0 +1,46 @@
+let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | (`C_'lam31 (append)), _'a11 ->
+        let _'cont22 = `C_'lam32 (_'a11, append) in
+        _'defunc_apply `C_'lam37 3 Nil `C_'lam32
+      | (`C_'lam32 (_'a11, append)), _'a21 ->
+        let _'cont24 = `C_'lam33 (_'a11, append) in
+        _'defunc_apply `C_'lam35 2 _'a21 `C_'lam33
+      | (`C_'lam33 (_'a11, append)), _'a23 ->
+        let _'cont26 = `C_'lam34 in
+        _'defunc_apply global:append _'a11 _'a23 `C_'lam34
+      | `C_'lam34, _'a25 -> _'a25
+      | `C_'lam35, _'a13, _'k15 ->
+        (_'defunc_apply _'k15 (`C_'lam36 _'a13))
+      | (`C_'lam36 (_'a13)), _'a14, _'k16 ->
+        (_'defunc_apply _'k16 (Cons (_'a13, _'a14)))
+      | `C_'lam37, _'a17, _'k19 ->
+        (_'defunc_apply _'k19 (`C_'lam38 _'a17))
+      | (`C_'lam38 (_'a17)), _'a18, _'k20 ->
+        (_'defunc_apply _'k20 (Cons (_'a17, _'a18)))
+      | `C_'lam39, _'a7, _'k9 ->
+        (_'defunc_apply _'k9 (`C_'lam40 _'a7))
+      | (`C_'lam40 (_'a7)), _'a8, _'k10 ->
+        (_'defunc_apply _'k10 (Cons (_'a7, _'a8)))
+      | `C_'lam27, xs, ys, _'k0 ->
+        match xs with
+        | Nil -> (_'defunc_apply _'k0 ys)
+        | Cons (xh, xt) ->
+          let _'cont6 = `C_'lam28 (_'k0, xh) in
+          _'defunc_apply global:append xt ys `C_'lam28
+      | (`C_'lam28 (_'k0, xh)), _'a5 ->
+        (_'defunc_apply `C_'lam29 xh _'a5 _'k0)
+      | `C_'lam29, _'a1, _'k3 ->
+        (_'defunc_apply _'k3 (`C_'lam30 _'a1))
+      | (`C_'lam30 (_'a1)), _'a2, _'k4 ->
+        (_'defunc_apply _'k4 (Cons (_'a1, _'a2)))
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec append = `C_'lam27 in ();;
+let _ =
+  let _'cont12 = `C_'lam31 append in
+  _'defunc_apply `C_'lam39 1 Nil `C_'lam31;;

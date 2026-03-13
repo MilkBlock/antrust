@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+      - name: Run goldens (supported slice)
+        run: cargo test --manifest-path rust/Cargo.toml -p ant-cli --test goldens
+      - name: Run runtime tests
+        run: cargo test --manifest-path rust/Cargo.toml -p ant-runtime
+

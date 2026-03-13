@@ -1,0 +1,28 @@
+(* Nil: int_list *)
+(* Cons: (int, int_list) -> int_list *)
+type int_list = | Nil | Cons of int * int_list;;
+(* list_incr (int_list) -> int_list *)
+let rec list_incr =
+  fun x ->
+    match x with
+    | Nil -> Nil
+    | Cons (xh, xt) -> (Cons ((xh + 1), (global:list_incr xt)));;let _'defunc_apply =
+  let rec _'defunc_apply =
+    fun _'f _'a ->
+      match (_'f, _'a) with
+      | `C_'lam7, x, _'k0 ->
+        match x with
+        | Nil -> (_'defunc_apply _'k0 Nil)
+        | Cons (xh, xt) ->
+          let _'cont6 = `C_'lam8 (_'k0, xh) in
+          _'defunc_apply global:list_incr xt `C_'lam8
+      | (`C_'lam8 (_'k0, xh)), _'a5 ->
+        (_'defunc_apply `C_'lam9 (xh + 1) _'a5 _'k0)
+      | `C_'lam9, _'a1, _'k3 -> (_'defunc_apply _'k3 (`C_'lam10 _'a1))
+      | (`C_'lam10 (_'a1)), _'a2, _'k4 ->
+        (_'defunc_apply _'k4 (Cons (_'a1, _'a2)))
+  in
+  _'defunc_apply;;
+type int_list = | Nil | Cons of int * int_list;;
+let () =
+  let rec list_incr = `C_'lam7 in ();;

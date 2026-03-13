@@ -1,0 +1,61 @@
+name: Benchmarks
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - rust/**
+      - tools/**
+      - .github/workflows/bench.yml
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: benchmarks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  bench-regression:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache criterion baseline
+        uses: actions/cache@v4
+        with:
+          path: rust/target/criterion
+          key: ${{ runner.os }}-criterion-${{ github.ref_name }}
+          restore-keys: |
+            ${{ runner.os }}-criterion-
+
+      - name: Run benchmarks and check regressions
+        run: |
+          set -euo pipefail
+          BASELINE_PARSE="rust/target/criterion/parse_test/ci"
+          BASELINE_RUNTIME="rust/target/criterion/memo_exec/ci"
+          if [ -d "$BASELINE_PARSE" ] && [ -d "$BASELINE_RUNTIME" ]; then
+            for bench in parse runtime; do
+              cargo bench --manifest-path rust/Cargo.toml -p ant-bench --bench "$bench" -- --baseline ci
+            done
+            python3 tools/bench/check_regressions.py --threshold 0.1
+          else
+            echo "No baseline found; creating baseline 'ci'."
+            for bench in parse runtime; do
+              cargo bench --manifest-path rust/Cargo.toml -p ant-bench --bench "$bench" -- --save-baseline ci
+            done
+            echo "Baseline created; skipping regression check."
+          fi
+
+      - name: Upload Criterion reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: criterion-report
+          path: rust/target/criterion/**/report
+          if-no-files-found: ignore

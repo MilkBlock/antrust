@@ -15,8 +15,14 @@ cargo test --manifest-path rust/Cargo.toml -p ant-runtime
 cargo run --manifest-path rust/Cargo.toml -p ant-cli -- <INPUT.ant> <OUTPUT.txt> --print-ast
 ```
 
+## Benchmarks
+
+```bash
+cargo bench --manifest-path rust/Cargo.toml -p ant-bench --bench parse
+cargo bench --manifest-path rust/Cargo.toml -p ant-bench --bench runtime
+```
+
 ## Notes
 
 - `rust/goldens/` contains byte-for-byte output snapshots captured from the upstream OCaml implementation.
 - Regenerating goldens requires the OCaml toolchain from the original Ant repo.
-
